@@ -1,0 +1,17 @@
+{:dependencies
+ [[reagent "0.8.1"]]
+
+ :source-paths
+ ["src/cljs"]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :modules {:main {:entries [playing-with-fundamental-cljs.app]}}
+
+        :devtools
+        {:after-load  playing-with-fundamental-cljs.app/main
+         :http-root   "public"
+         :http-port   3000}
+}}}
